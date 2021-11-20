@@ -79,7 +79,7 @@ struct Handle : View {
     var body: some View {
         RoundedRectangle(cornerRadius: handleThickness / 2.0)
             .frame(width: 27, height: handleThickness)
-            .foregroundColor(Color.secondary)
+            .foregroundColor(Color(.sRGB, red: 196/255, green: 196/255, blue: 196/255, opacity: 0.35))
             .padding(.vertical, handleVerticalPadding)
     }
 }
