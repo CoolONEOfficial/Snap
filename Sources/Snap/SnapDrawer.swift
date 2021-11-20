@@ -1,8 +1,8 @@
 
 import SwiftUI
 
-let handleVerticalPadding: CGFloat = 16
-let handleThickness: CGFloat = 5
+let handleVerticalPadding: CGFloat = 10
+let handleThickness: CGFloat = 4
 
 public struct SnapDrawer<StateType: SnapState, Background : View, Content: View> : View {
     private let calculator: SnapPointCalculator<StateType>
@@ -78,7 +78,7 @@ public struct SnapDrawer<StateType: SnapState, Background : View, Content: View>
 struct Handle : View {
     var body: some View {
         RoundedRectangle(cornerRadius: handleThickness / 2.0)
-            .frame(width: 40, height: handleThickness)
+            .frame(width: 27, height: handleThickness)
             .foregroundColor(Color.secondary)
             .padding(.vertical, handleVerticalPadding)
     }
