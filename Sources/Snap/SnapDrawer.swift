@@ -53,7 +53,7 @@ public struct SnapDrawer<StateType: SnapState, Background : View, Content: View>
             .onEnded(onDragEnded)
 
         return ZStack {
-            currentResult.state.visible.map { background($0).ignoresSafeArea(.container, edges: .all) }
+            currentResult.state.visible.map { background($0) }
 
             VStack(spacing: 0) {
                 currentResult.state.visible != nil ? Handle() : nil
